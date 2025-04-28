@@ -46,11 +46,11 @@ body {
   width: 300px; 
   height: 300px;  
   position: absolute;
-  left: 801px;   
-  bottom: 800px;   
+  left: 350px;   
+  bottom: 350px;   
   margin: 0; 
   transform: translateY(-50%); 
-   
+
 }
 
 .love .block {
