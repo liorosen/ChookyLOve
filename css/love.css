@@ -46,10 +46,14 @@
   .love {
     width: 520px;
     height: 440px;
+    left: 50%;
+    top: 50%;
+    margin: -220px 0 0 -260px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+   
     
   }
   
