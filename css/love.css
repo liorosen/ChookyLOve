@@ -1,95 +1,90 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html, body {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    text-align: center;
-  }
-  
-  #start-screen {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #start-btn {
-    padding: 20px 40px;
-    font-size: 2rem;
-    background-color: pink;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-  }
-  
-  #main-content {
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    position: relative;
-    gap: 10px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-  
 
-  /* The heart */
-  .love {
-    width: 520px;
-    height: 440px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin: -220px 0 0 -260px; /* Half of height and width */
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align: center;
 }
-  
-  .love .block {
-    position: absolute;
-    visibility: hidden;
-  }
-  
-  .love .block div {
-    width: 30px;
-    height: 30px;
-    background: url("../images/mooncake.png") no-repeat center;
-    background-size: cover;
-    position: absolute;
-  }
-  
-  /* Text */
-  #love-text {
-    font-size: 2rem;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    margin-top: 50px;  
-    letter-spacing: .12em;
-    animation: typing 4s steps(30, end) forwards, blink-caret .75s step-end infinite;
-    display: none;      
-  }
-  
-  #sleeping-gif img {
-    display: flex;
-    justify-content: center;
-    width: 300px;
-    margin-top: 5px;
-  }
-  
-  /* Typing Animation */
-  @keyframes typing {
-    from { width: 0; }
-    to { width:  28ch; }
-  }
-  
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: black; }
-  }
-  
+
+#start-screen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#start-btn {
+  padding: 20px 40px;
+  font-size: 2rem;
+  background-color: pink;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+#main-content {
+  width: 100%;
+  height: 100%;
+  position: relative;  /* 🛑 NOT flex anymore!! */
+  overflow: hidden;
+}
+
+/* Heart */
+.love {
+  width: 520px;
+  height: 440px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -220px 0 0 -260px;
+}
+
+.love .block {
+  position: absolute;
+  visibility: hidden;
+}
+
+.love .block div {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  background: url("../images/mooncake.png") no-repeat center;
+  background-size: contain;
+}
+
+/* Text */
+#love-text {
+  font-size: 2rem;
+  color: black;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-top: 500px; /* Moved DOWN so it's below heart */
+  letter-spacing: .1em;
+  animation: typing 4s steps(30, end) forwards, blink-caret .75s step-end infinite;
+  display: none;
+  position: relative;
+}
+
+/* Gary sleeping gif */
+#sleeping-gif img {
+  width: 300px;
+  margin-top: 20px;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 28ch; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black; }
+}
