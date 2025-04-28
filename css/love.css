@@ -35,20 +35,21 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    display: none; /* hide initially */
-    gap: 10px;
+    display:flex; /* hide initially */
+    gap: 20px;
   }
   
 
   /* The heart */
   .love {
-    width: 220px;
-    height: 220px;
+    width: 300px;
+    height: 300px;
     position: relative;
     display: grid;
     place-items: center;
-    margin-top: 20px;
     align-items: center;
+    margin-top: 20px;
+    
   }
   
   .love .block {
