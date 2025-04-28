@@ -62,18 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-function Next() {
-  heartBuildingSteps++;
-
-  // Here you would build more of the heart step-by-step
-  // (I'm assuming you have logic for Next() adding mooncakes)
-
-  if (heartBuildingSteps >= 50) { // adjust number of steps if needed
-    clearInterval(timer);
-    Rise();  // <-- call Rise() once heart building is done
-  }
-}
-
 let finishedHeart = false;
 function Rise() {
     console.log("Start rising");
