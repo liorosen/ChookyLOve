@@ -45,7 +45,10 @@
     width: 300px;
     height: 300px;
     position: relative;
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
 }
   
   .love .block {
