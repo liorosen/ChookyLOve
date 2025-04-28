@@ -61,6 +61,10 @@ html, body {
 
 /* Text */
 #love-text {
+  position: absolute;
+  top: 65%; /* 📍 Show text between heart and gif */
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 2rem;
   color: black;
   overflow: hidden;
@@ -75,7 +79,10 @@ html, body {
 /* Gary sleeping gif */
 #sleeping-gif img {
   width: 300px;
-  margin-top: 20px;
+  position: absolute;
+  top: 75%; /* 📍 Gary gif after the text */
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* Typing animation */
