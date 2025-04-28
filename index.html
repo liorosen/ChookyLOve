@@ -1,84 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>I Love You Chooky !!</title>
-    <link rel="stylesheet" href="css/love.css">
+  <meta charset="UTF-8">
+  <title>I Love You Chooky !!</title>
+  <link rel="stylesheet" href="css/love.css">
 </head>
 
 <body>
 
-<audio id="audios" preload="auto" autoplay loop>
+<audio id="audios" preload="auto" autoplay muted loop>
   <source src="MP3/Kiss - I Was Made For Lovin' You.mp3" type="audio/mpeg">
 </audio>
 
 <div class="container">
-    <div id="heart" class="love">
-        <div class="block">
-            <div class="div1"></div>
-            <div class="div2"></div>
-            <div class="div3"></div>
-            <div class="div4"></div>
-        </div>
+  <!-- Heart -->
+  <div id="heart" class="love">
+    <div class="block">
+      <div class="div1"></div>
+      <div class="div2"></div>
+      <div class="div3"></div>
+      <div class="div4"></div>
     </div>
+  </div>
 
-    <div id="love-text">I Love You Chooky !!</div>
+  <!-- I Love You Chooky text -->
+  <div id="love-text">I Love You Chooky !!</div>
 
-    <div id="sleeping-gif">
-        <img id="sleeping" src="images/Garygif.gif" />
-    </div>
+  <!-- Gary sleeping gif -->
+  <div id="sleeping-gif">
+    <img id="sleeping" src="images/Garygif.gif" />
+  </div>
 
-    <div id="audio-controls">
-        <button id="playBtn">Play Music</button>
-        <button id="pauseBtn">Pause Music</button>
-    </div>
+  <!-- Audio buttons -->
+  <div id="audio-controls">
+    <button id="playBtn">Play Music</button>
+    <button id="pauseBtn">Pause Music</button>
+  </div>
 </div>
 
 <script src="js/love.js"></script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    const audio = document.getElementById('audios');
-    audio.muted = false; // Force unmute after page loads
+  const audio = document.getElementById('audios');
 
-    // Buttons to control music
-    document.getElementById('playBtn').addEventListener('click', () => {
-        audio.play();
+  // Unmute and force play after load
+  audio.muted = false;
+  setTimeout(() => {
+    audio.play().catch(err => {
+      console.log('Autoplay prevented:', err);
     });
+  }, 100);
 
-    document.getElementById('pauseBtn').addEventListener('click', () => {
-        audio.pause();
-    });
+  // Buttons
+  document.getElementById('playBtn').addEventListener('click', () => {
+    audio.play();
+  });
 
-    // Start heart and text timing
-    document.getElementById('heart').style.display = 'none';
-    document.getElementById('love-text').style.display = 'none';
+  document.getElementById('pauseBtn').addEventListener('click', () => {
+    audio.pause();
+  });
 
-    setTimeout(() => {
-        document.getElementById('heart').style.display = 'block';
+  // Hide heart and text first
+  document.getElementById('heart').style.display = 'none';
+  document.getElementById('love-text').style.display = 'none';
 
-        timer = setInterval(() => {
-            Next();
-        }, 200);
-    }, 3000); // Heart appears after 3 seconds
+  setTimeout(() => {
+    document.getElementById('heart').style.display = 'block';
+
+    timer = setInterval(() => {
+      Next();
+    }, 200);
+  }, 3000); // Show heart after 3s
 });
 
 // Rise function
 function Rise() {
-    let timer2 = null, distance = 0;
-    const target = 40; // <-- REDUCE target rise
-    const speed = 1;   // <-- make speed slower
-    const love_top = parseFloat(window.getComputedStyle(love, null).top.slice(0, -2));
+  let timer2 = null, distance = 0;
+  const target = 20; // Much smaller movement
+  const speed = 1;
+  const love_top = parseFloat(window.getComputedStyle(love, null).top.slice(0, -2));
 
-    timer2 = setInterval(() => {
-        distance += speed;
-        if (distance >= target) {
-            clearInterval(timer2);
+  timer2 = setInterval(() => {
+    distance += speed;
+    if (distance >= target) {
+      clearInterval(timer2);
 
-            document.getElementById('love-text').style.display = 'block';
-        }
-        love.style.top = (love_top - distance) + "px";
-    }, 16);
+      document.getElementById('love-text').style.display = 'block';
+    }
+    love.style.top = (love_top - distance) + "px";
+  }, 22);
 }
 </script>
 

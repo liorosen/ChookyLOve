@@ -5,11 +5,9 @@
   }
   
   html, body {
-    margin: 0;
-    padding: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden; /* No scroll allowed */
+    overflow: hidden; /* No scroll */
     font-family: "Comic Sans MS", cursive, sans-serif;
   }
   
@@ -18,13 +16,13 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center vertically */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     text-align: center;
-    align-items: center; /* Center horizontally */
-    gap: 10px; /* Small space between heart, text, and Gary */
   }
   
-  /* Heart smaller */
+  /* Heart */
   .love {
     width: 300px;
     height: 260px;
@@ -45,22 +43,23 @@
     background-size: contain;
   }
   
-  /* Text centered */
+  /* Centered Text */
   #love-text {
     font-size: 2rem;
     color: black;
     overflow: hidden;
     white-space: nowrap;
-    text-align: center; 
     margin: 10px auto;
     letter-spacing: .1em;
-    animation: typing 4s steps(20) forwards, blink-caret .75s step-end infinite;
+    animation: typing 4s steps(25, end) forwards, blink-caret .75s step-end infinite;
     width: 0;
- }
+    display: none;
+    text-align: center;
+  }
   
-  /* Gary bigger */
+  /* Bigger Gary */
   #sleeping-gif img {
-    width: 300px; /* bigger Gary */
+    width: 300px;
     margin-top: 5px;
   }
   
@@ -75,10 +74,10 @@
     cursor: pointer;
   }
   
-  /* Typing animation */
+  /* Typing Animation */
   @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+    from { width: 0; }
+    to { width: 15ch; } /* Instead of 100% */
   }
   
   @keyframes blink-caret {
