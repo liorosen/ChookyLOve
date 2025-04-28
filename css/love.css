@@ -48,6 +48,7 @@
     display: grid;
     place-items: center;
     margin-top: 20px;
+    align-items: center;
   }
   
   .love .block {
