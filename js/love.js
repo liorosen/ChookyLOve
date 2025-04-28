@@ -124,6 +124,5 @@ window.onload = function () {
             Next();
         }, 300);
 
-
     }, 12000);
 };
