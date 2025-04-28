@@ -46,8 +46,8 @@ body {
   width: 300px; 
   height: 300px;  
   position: absolute;
-  left: 50%;
-  top: 70%;  
+  left: 100%;
+  top: 100%;  
   margin: -170px 0 0 -200px;
 }
 
