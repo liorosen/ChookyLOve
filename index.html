@@ -39,6 +39,7 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const audio = document.getElementById('audios');
+    audio.muted = false; // Force unmute after page loads
 
     // Buttons to control music
     document.getElementById('playBtn').addEventListener('click', () => {
@@ -65,8 +66,8 @@ document.addEventListener('DOMContentLoaded', function() {
 // Rise function
 function Rise() {
     let timer2 = null, distance = 0;
-    const target = 80;
-    const speed = 2;
+    const target = 40; // <-- REDUCE target rise
+    const speed = 1;   // <-- make speed slower
     const love_top = parseFloat(window.getComputedStyle(love, null).top.slice(0, -2));
 
     timer2 = setInterval(() => {
