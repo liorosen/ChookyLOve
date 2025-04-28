@@ -42,10 +42,10 @@ body {
 
 /*---------------------- HEART -------------------------*/
 .love {
-  width: 520px; /* 13 * 40 */
-  height: 440px; /* 11 * 40 */
+  width: 480px;  
+  height: 400px;  
   position: absolute;
-  left: 70%;
+  left: 50%;
   top: 40%; /* not 50%, to leave room for text and gif */
   margin: -220px 0 0 -260px;
 }
@@ -66,7 +66,7 @@ body {
 /*---------------------- TEXT -------------------------*/
 #love-text {
   position: absolute;
-  top: 60%; /* position it under the heart */
+  top: 68%; /* position it under the heart */
   left: 50%;
   transform: translateX(-50%);
   font-size: 2rem;
@@ -81,7 +81,7 @@ body {
 /*---------------------- GARY GIF -------------------------*/
 #sleeping-gif img {
   position: absolute;
-  top: 72%; /* a little under the text */
+  top: 78%; /* a little under the text */
   left: 50%;
   transform: translateX(-50%);
   width: 700px;
