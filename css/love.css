@@ -42,12 +42,10 @@
 
   /* The heart */
   .love {
-    width: 220px;
-    height: 220px;
+    width: 300px;
+    height: 300px;
     position: relative;
-    display: grid;
-    place-items: center;
-    margin-top: 20px; /*
+    margin-top: 300px;
 }
   
   .love .block {
