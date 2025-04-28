@@ -31,10 +31,10 @@ body {
     margin: 50px auto;
     letter-spacing: .15em;
     animation:
-      typing 4s steps(30, end),
+      typing 4s steps(20, end),
       blink-caret .75s step-end infinite;
     width: 0;
-    display: none;
+    
 }
 
 @keyframes typing {

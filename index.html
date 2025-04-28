@@ -41,7 +41,6 @@
             document.getElementById('love-text').style.display = 'none';
 
             setTimeout(() => {
-                document.getElementById('sleeping-gif').style.display = 'none';
                 document.getElementById('heart').style.display = 'block';
 
                 // Start drawing heart
@@ -74,6 +73,13 @@
             }, 22);
         }
     </script>
+
+<script>
+    window.addEventListener('click', () => {
+        const audio = document.getElementById('audios');
+        audio.play();
+    });
+</script>
 
 </body>
 </html>
