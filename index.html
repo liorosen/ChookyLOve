@@ -42,49 +42,54 @@
 
     <script src="js/love.js"></script>
 
-    <script>
-        const audio = document.getElementById('audios');
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const audio = document.getElementById('audios');
 
-        document.getElementById('playBtn').addEventListener('click', () => {
-            audio.play();
-        });
+    // First click anywhere plays music
+    document.body.addEventListener('click', function() {
+        audio.play();
+    }, { once: true });
 
-        document.getElementById('pauseBtn').addEventListener('click', () => {
-            audio.pause();
-        });
+    // Play/Pause buttons
+    document.getElementById('playBtn').addEventListener('click', () => {
+        audio.play();
+    });
 
-        window.onload = function () {
-            document.getElementById('heart').style.display = 'none';
-            document.getElementById('love-text').style.display = 'none';
+    document.getElementById('pauseBtn').addEventListener('click', () => {
+        audio.pause();
+    });
 
-            setTimeout(() => {
-                document.getElementById('heart').style.display = 'block';
+    // Page loading
+    document.getElementById('heart').style.display = 'none';
+    document.getElementById('love-text').style.display = 'none';
 
-                // Start heart animation
-                timer = setInterval(() => {
-                    Next();
-                }, 200); // speed up a bit to fit screen
+    setTimeout(() => {
+        document.getElementById('heart').style.display = 'block';
 
-            }, 3000); // 3 sec delay after load
-        };
+        // Start heart animation
+        timer = setInterval(() => {
+            Next();
+        }, 200);
 
-        function Rise() {
-            let timer2 = null, distance = 0;
-            const target = 80; // reduce rise distance to fit screen
-            const speed = 2; // faster
-            const love_top = parseFloat(window.getComputedStyle(love, null).top.slice(0, -2));
+    }, 3000); // 3 sec delay after page load
+});
 
-            timer2 = setInterval(() => {
-                distance += speed;
-                if (distance >= target) {
-                    clearInterval(timer2);
+// Rise function
+function Rise() {
+    let timer2 = null, distance = 0;
+    const target = 80;
+    const speed = 2;
+    const love_top = parseFloat(window.getComputedStyle(love, null).top.slice(0, -2));
 
-                    document.getElementById('love-text').style.display = 'block';
-                }
-                love.style.top = (love_top - distance) + "px";
-            }, 16);
+    timer2 = setInterval(() => {
+        distance += speed;
+        if (distance >= target) {
+            clearInterval(timer2);
+
+            document.getElementById('love-text').style.display = 'block';
         }
-    </script>
-
-</body>
-</html>
+        love.style.top = (love_top - distance) + "px";
+    }, 16);
+}
+</script>
