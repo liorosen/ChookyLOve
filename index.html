@@ -62,24 +62,27 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// Fix Rise function
-function Rise() {
-  let timer2 = null, distance = 0;
-  const target = 30; 
-  const speed = 1;
-  const love_top = parseFloat(window.getComputedStyle(love, null).top.slice(0, -2));
+let finishedHeart = false;
+        function Rise() {
+            console.log("Start rising");
 
-  timer2 = setInterval(() => {
-    distance += speed;
-    if (distance >= target) {
-      clearInterval(timer2);
+            let timer2 = null, distance = 0;
+            const target = 120, speed = 1;
+            let love_top = parseFloat(window.getComputedStyle(love, null).top.slice(0, -2));
 
-      // After heart finished rising, show the text
-      document.getElementById('love-text').style.display = 'block';
-    }
-    love.style.top = (love_top - distance) + "px";
-  }, 22);
-}
+            timer2 = setInterval(() => {
+                distance += speed;
+                if (distance >= target) {
+                    clearInterval(timer2);
+                    console.log("Rise finished");
+
+                    // After heart rise completed, show text
+                    document.getElementById('love-text').style.display = 'block';
+                }
+
+                love.style.top = (love_top - distance) + "px";
+            }, 22);
+        }
 </script>
 
 </body>
