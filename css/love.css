@@ -46,6 +46,9 @@
     height: 260px;
     margin: auto;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .love .block {
