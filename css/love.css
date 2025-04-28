@@ -49,22 +49,20 @@
     left: 50%;
     top: 50%;
     margin: -220px 0 0 -260px;
-    display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+    position: absolute;
    
     
   }
   
   .love .block {
-    position: relative;
+    position: absolute;
     visibility: hidden;
   }
   
   .love .block div {
     width: 40px;
     height: 40px;
+    position: absolute;
     background: url("../images/mooncake.png") no-repeat;
     background-size: contain;
   }
