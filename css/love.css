@@ -34,6 +34,7 @@
     height: 100%;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
     align-items: center;
     display: flex;
     gap: 10px;
@@ -74,6 +75,8 @@
   }
   
   #sleeping-gif img {
+    display: flex;
+    justify-content: center;
     width: 300px;
     margin-top: 5px;
   }
