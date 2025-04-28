@@ -42,8 +42,8 @@ html, body {
   height: 440px;
   position: absolute;
   left: 50%;
-  top: 50%;
-  margin: -220px 0 0 -260px;
+  top: 20%; /* 🛑 Change top: 50% to 20% to pull heart down */
+  transform: translateX(-50%); /
 }
 
 .love .block {
