@@ -49,13 +49,12 @@
     left: 50%;
     top: 50%;
     margin: -220px 0 0 -260px;
-    position: absolute;
+   
     
   }
   
   .love .block {
-    right: 0;
-    position: absolute;
+    position: relative;
     visibility: hidden;
   }
   
