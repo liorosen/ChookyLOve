@@ -43,12 +43,12 @@ body {
 
 /*---------------------- HEART -------------------------*/
 .love {
-  width: 520px; /* 13 * 40 */
-  height: 440px; /* 11 * 40 */
+  width: 400px; 
+  height: 340px;  
   position: absolute;
   left: 50%;
-  top: 40%; /* not 50%, to leave room for text and gif */
-  margin: -220px 0 0 -260px;
+  top: 30%;  
+  margin: -170px 0 0 -200px;
 }
 
 .love .block {
@@ -57,8 +57,8 @@ body {
 }
 
 .love .block div {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   background: url("../images/mooncake.png") no-repeat center;
   background-size: contain;
   position: absolute;
@@ -67,7 +67,7 @@ body {
 /*---------------------- TEXT -------------------------*/
 #love-text {
   position: absolute;
-  top: 65%; /* position it under the heart */
+  top: 60%; /* position it under the heart */
   left: 50%;
   transform: translateX(-50%);
   font-size: 2rem;
@@ -82,10 +82,10 @@ body {
 /*---------------------- GARY GIF -------------------------*/
 #sleeping-gif img {
   position: absolute;
-  top: 72%; /* a little under the text */
+  top: 68%; /* a little under the text */
   left: 50%;
   transform: translateX(-50%);
-  width: 300px;
+  width: 400px;
 }
 
 /*---------------------- Typing Animation -------------------------*/
