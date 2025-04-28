@@ -70,7 +70,7 @@ body {
 #love-text {
   position: absolute;
   top: 55%;  
-  left: 50%;
+  left: 55%;
   transform: translateX(-50%);
   font-size: 2rem;
   color: black;
@@ -85,7 +85,7 @@ body {
 #sleeping-gif img {
   position: absolute;
   top: 65%; /* little under the text */
-  left: 50%;
+  left: 55%;
   transform: translateX(-50%);
   width: 400px;
 }
