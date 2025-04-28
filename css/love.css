@@ -35,7 +35,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    display: none; /* hide initially */
+    
     gap: 10px;
 }
   
@@ -54,8 +54,8 @@
   }
   
   .love .block div {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     background: url("../images/mooncake.png") no-repeat center;
     background-size: cover;
     position: absolute;
@@ -70,7 +70,6 @@
     margin: 10px auto;
     letter-spacing: .1em;
     animation: typing 4s steps(30, end) forwards, blink-caret .75s step-end infinite;
-    z-index: 10;
          
   }
   
