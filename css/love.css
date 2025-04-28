@@ -82,7 +82,7 @@ body {
 /*---------------------- GARY GIF -------------------------*/
 #sleeping-gif img {
   position: absolute;
-  top: 68%; /* a little under the text */
+  top: 68%; /* little under the text */
   left: 50%;
   transform: translateX(-50%);
   width: 400px;
