@@ -57,9 +57,9 @@ let blocks = document.getElementsByClassName("block"),
     clone_block;    
 
 
-block.style.left = 0;
-block.style.top = 0;
-block.style.margin = 0;
+block.style.left = "0";
+block.style.top = "0";
+block.style.margin = "0";
 
 const block_left = parseFloat(window.getComputedStyle(block, null).left.slice(0, -2)),
     block_top = parseFloat(window.getComputedStyle(block, null).top.slice(0, -2));
