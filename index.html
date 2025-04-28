@@ -8,11 +8,12 @@
 
 <body>
 
-    <audio autoplay loop id="audios" preload="auto">
+    <audio id="audios" preload="auto" loop>
         <source src="music/Kiss - I Was Made For Lovin' You.mp3" type="audio/mpeg">
     </audio>
 
     <div class="container">
+
         <div id="heart" class="love">
             <div class="block">
                 <div class="div1"></div>
@@ -22,18 +23,37 @@
             </div>
         </div>
 
+        <div id="love-text">I Love You Chooky</div>
+
         <div id="sleeping-gif">
             <img id="sleeping" src="images/Garygif.gif" />
         </div>
 
-        <div id="love-text">I Love You Chooky</div>
+        <div id="audio-controls">
+            <button id="playBtn">Play Music</button>
+            <button id="pauseBtn">Pause Music</button>
+        </div>
+
     </div>
 
     <script src="js/love.js"></script>
+
     <script>
         const audio = document.getElementById('audios');
-        window.addEventListener('click', function() {
+
+        // To force browsers to allow audio, user must click once
+        window.addEventListener('click', function playMusicOnce() {
             audio.play();
+            window.removeEventListener('click', playMusicOnce); // Remove after first click
+        });
+
+        // Music control buttons
+        document.getElementById('playBtn').addEventListener('click', () => {
+            audio.play();
+        });
+
+        document.getElementById('pauseBtn').addEventListener('click', () => {
+            audio.pause();
         });
 
         window.onload = function () {
@@ -43,12 +63,12 @@
             setTimeout(() => {
                 document.getElementById('heart').style.display = 'block';
 
-                // Start drawing heart
+                // Start heart animation
                 timer = setInterval(() => {
                     Next();
                 }, 300);
 
-            }, 5000); // Adjust this timing depending on how long your sleeping GIF is
+            }, 5000);
         };
 
         let finishedHeart = false;
@@ -65,7 +85,7 @@
                     clearInterval(timer2);
                     console.log("Rise finished");
 
-                    // After heart rise completed, show text
+                    // Show text after heart finishes rising
                     document.getElementById('love-text').style.display = 'block';
                 }
 
@@ -73,13 +93,6 @@
             }, 22);
         }
     </script>
-
-<script>
-    window.addEventListener('click', () => {
-        const audio = document.getElementById('audios');
-        audio.play();
-    });
-</script>
 
 </body>
 </html>
