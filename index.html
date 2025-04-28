@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>I Love You Chooky </title>
+    <title>I Love You Chooky !!</title>
     <link rel="stylesheet" href="css/love.css">
 </head>
 
@@ -25,7 +25,7 @@
         </div>
 
         <!-- I Love You Chooky text -->
-        <div id="love-text">I Love You Chooky !!!</div>
+        <div id="love-text"> I Love You Chooky !!</div>
 
         <!-- Gary sleeping gif -->
         <div id="sleeping-gif">
@@ -66,14 +66,16 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('love-text').style.display = 'none';
 
     setTimeout(() => {
-        document.getElementById('heart').style.display = 'block';
+    const audio = document.getElementById('audios');
+    audio.play(); // Play the music automatically when Gary appears!
 
-        // Start heart animation
-        timer = setInterval(() => {
-            Next();
-        }, 200);
+    document.getElementById('heart').style.display = 'block';
 
-    }, 3000); // 3 sec delay after page load
+    timer = setInterval(() => {
+        Next();
+    }, 200);
+}, 3000); // 3 seconds after page loads
+
 });
 
 // Rise function
