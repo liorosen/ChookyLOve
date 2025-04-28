@@ -98,7 +98,7 @@ function Rise() {
         speed = 1;
 
     let love_top = parseFloat(window.getComputedStyle(love, null).top.slice(0, -2));
-
+    
 
     timer2 = setInterval(() => {
         distance += speed;
