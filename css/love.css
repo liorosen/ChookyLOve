@@ -42,7 +42,7 @@ html, body {
   height: 440px;
   position: absolute;
   left: 50%;
-  top: 10%; /* 🛑 Change top: 50% to 20% to pull heart down */
+  bottom: 40%; 
   transform: translateX(-50%); /
 }
 
@@ -62,7 +62,7 @@ html, body {
 /* Text */
 #love-text {
   position: absolute;
-  top: 65%; /* 📍 Show text between heart and gif */
+  top: 15%; /* 📍 Show text between heart and gif */
   left: 50%;
   transform: translateX(-50%);
   font-size: 2rem;
@@ -80,7 +80,7 @@ html, body {
 #sleeping-gif img {
   width: 300px;
   position: absolute;
-  top: 75%; /* 📍 Gary gif after the text */
+  top: 25%; /* 📍 Gary gif after the text */
   left: 50%;
   transform: translateX(-50%);
 }
