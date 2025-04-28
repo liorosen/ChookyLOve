@@ -44,15 +44,9 @@
 
 <script>
     
-document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function() {
     const audio = document.getElementById('audios');
 
-    // First click anywhere plays music
-    document.body.addEventListener('click', function() {
-        audio.play();
-    }, { once: true });
-
-    // Play/Pause buttons
     document.getElementById('playBtn').addEventListener('click', () => {
         audio.play();
     });

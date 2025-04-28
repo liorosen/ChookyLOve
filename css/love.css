@@ -24,12 +24,12 @@
   
   /* Heart smaller */
   .love {
-    width: 320px; /* reduced */
-    height: 270px; /* reduced */
+    width: 300px;
+    height: 260px;
     margin: auto;
-    margin-bottom: 20px;
     position: relative;
-  }
+}
+
   
   .love .block {
     right: 0;
@@ -40,7 +40,6 @@
   .love .block div {
     width: 25px;
     height: 25px;
-    position: absolute;
     background: url("../images/mooncake.png") no-repeat;
     background-size: contain;
   }
@@ -52,8 +51,7 @@
     overflow: hidden;
     white-space: nowrap;
     border-right: .1em solid black;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px auto;
     letter-spacing: .1em;
     animation: typing 4s steps(20) forwards, blink-caret .75s step-end infinite;
     width: 0;
