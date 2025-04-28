@@ -46,7 +46,7 @@ body {
   height: 400px;  
   position: absolute;
   left: 50%;
-  top: 30%;  
+  top: 40%; /* not 50%, to leave room for text and gif */
   margin: -220px 0 0 -260px;
 }
 
@@ -84,7 +84,7 @@ body {
   top: 78%; /* a little under the text */
   left: 50%;
   transform: translateX(-50%);
-  width: 320px;
+  width: 700px;
 }
 
 /*---------------------- Typing Animation -------------------------*/
