@@ -57,12 +57,18 @@ let blocks = document.getElementsByClassName("block"),
     clone_block;    
 
 
+// Center the first block manually
+block.style.position = "absolute";
 block.style.left = "50%";
 block.style.top = "50%";
 block.style.margin = "-20px 0 0 -20px";
 
-const block_left = parseFloat(window.getComputedStyle(block, null).left.slice(0, -2)),
-    block_top = parseFloat(window.getComputedStyle(block, null).top.slice(0, -2));
+// NOW measure real pixel positions
+const block_left = window.innerWidth / 2;
+const block_top = window.innerHeight / 2;
+
+// const block_left = parseFloat(window.getComputedStyle(block, null).left.slice(0, -2)),
+//     block_top = parseFloat(window.getComputedStyle(block, null).top.slice(0, -2));
 
 function Next() {
     if (++index >= 24) {
