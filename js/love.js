@@ -56,9 +56,9 @@ let blocks = document.getElementsByClassName("block"),
     index = 0, 
     clone_block;    
 
-block.style.position = "absolute";
+
 block.style.left = "50%";
-block.style.top = "30%";
+block.style.top = "50%";
 block.style.margin = "-20px 0 0 -20px";
 
 const block_left = parseFloat(window.getComputedStyle(block, null).left.slice(0, -2)),
