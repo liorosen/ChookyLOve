@@ -119,11 +119,15 @@ function Rise() {
 
 window.onload = function () {
     setTimeout(() => {
+        distance += speed;
+        if (distance >= target) {
+            clearInterval(timer2);
+            console.log("Rise finished");
 
-        timer = setInterval(() => {
-            Next();
-        }, 300);
+            // Show text after heart finishes rising
+            document.getElementById('love-text').style.display = 'block';
+        }
 
-
-    }, 12000);
+        love.style.top = (love_top - distance) + "px";
+    }, 22);
 };
