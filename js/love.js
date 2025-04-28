@@ -91,7 +91,7 @@ function Next() {
 }
 
 function Rise() {
-    console.log("开始升空");
+     
     let timer2 = null,
         distance = 0;
     const target = 120, 
@@ -103,7 +103,7 @@ function Rise() {
         distance += speed;
         if (distance >= target) {
             clearInterval(timer2);
-            console.log("升空完毕");
+            
 
             // Show the text after rising
             const loveText = document.getElementById('love-text');
