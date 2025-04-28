@@ -66,6 +66,8 @@
   
   /* Text */
   #love-text {
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 2rem;
     color: black;
     overflow: hidden;
