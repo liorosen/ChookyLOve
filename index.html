@@ -8,11 +8,18 @@
 
 <body>
 
+<!-- Audio -->
 <audio id="audios" preload="auto" loop>
   <source src="MP3/Kiss - I Was Made For Lovin' You.mp3" type="audio/mpeg">
 </audio>
 
-<div class="container" id="main-content" style="display: none;">
+<!-- Start screen with only button -->
+<div id="start-screen">
+  <button id="start-btn">Click Me</button>
+</div>
+
+<!-- Hidden main content -->
+<div id="main-content" style="display: none;">
   <!-- Heart -->
   <div id="heart" class="love">
     <div class="block">
@@ -23,18 +30,13 @@
     </div>
   </div>
 
-  <!-- I Love You Chooky text -->
+  <!-- Typing text -->
   <div id="love-text">I Love You Chooky !!</div>
 
-  <!-- Gary sleeping gif -->
+  <!-- Gary GIF -->
   <div id="sleeping-gif">
-    <img id="sleeping" src="images/Garygif.gif" />
+    <img src="images/Garygif.gif" alt="Gary Sleeping">
   </div>
-</div>
-
-<!-- Start Button -->
-<div id="start-screen" class="start-screen">
-  <button id="start-btn">Click Me</button>
 </div>
 
 <script src="js/love.js"></script>
@@ -43,15 +45,15 @@
 document.addEventListener('DOMContentLoaded', function() {
   const audio = document.getElementById('audios');
   const startBtn = document.getElementById('start-btn');
-  const mainContent = document.getElementById('main-content');
   const startScreen = document.getElementById('start-screen');
+  const mainContent = document.getElementById('main-content');
 
   startBtn.addEventListener('click', function() {
-    audio.play();
-    startScreen.style.display = 'none'; // Hide the click me button
-    mainContent.style.display = 'flex'; // Show the heart, text, Gary
+    startScreen.style.display = 'none';    // Hide "Click Me" button
+    mainContent.style.display = 'flex';     // Show heart/text/Gary
+    audio.play();                           // Start music
 
-    // Start heart animation
+    // Start building the heart
     document.getElementById('heart').style.display = 'block';
 
     timer = setInterval(() => {
@@ -60,10 +62,10 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// Rise function
+// Fix Rise function
 function Rise() {
   let timer2 = null, distance = 0;
-  const target = 20;
+  const target = 20; // Small rise
   const speed = 1;
   const love_top = parseFloat(window.getComputedStyle(love, null).top.slice(0, -2));
 
@@ -71,6 +73,8 @@ function Rise() {
     distance += speed;
     if (distance >= target) {
       clearInterval(timer2);
+
+      // After heart finished rising, show the text
       document.getElementById('love-text').style.display = 'block';
     }
     love.style.top = (love_top - distance) + "px";
