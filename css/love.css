@@ -46,8 +46,8 @@ body {
   width: 300px; 
   height: 300px;  
   position: absolute;
-  left: 350px;   
-  bottom: 350px;   
+  left: 500px;   
+  bottom: 500px;   
   margin: 0; 
   transform: translateY(-50%);  
 }
