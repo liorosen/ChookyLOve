@@ -69,7 +69,8 @@
     white-space: nowrap;
     margin: 10px auto;
     letter-spacing: .1em;
-    animation: typing 4s steps(30, end) forwards, blink-caret .75s step-end infinite;
+    animation:   typing 2s steps(20, end),
+    blink-caret .75s step-end infinite;
      width : 0;   
   }
   
@@ -83,7 +84,7 @@
   /* Typing Animation */
   @keyframes typing {
     from { width: 0; }
-    to { width:  28ch; }
+    to { width:  100%; }
   }
   
   @keyframes blink-caret {
