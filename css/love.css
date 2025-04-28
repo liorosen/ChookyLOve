@@ -38,16 +38,17 @@ body {
   height: 100%;
   position: relative;
   overflow: hidden;
+  text-align: center;
 }
 
-/* ----------------- HEART ----------------- */
+/*---------------------- HEART -------------------------*/
 .love {
-  width: 520px;
-  height: 440px;
+  width: 520px; /* 13 * 40 */
+  height: 440px; /* 11 * 40 */
   position: absolute;
   left: 50%;
-  top: 30%;
-  transform: translate(-50%, -50%); /* <-- Center the heart correctly */
+  top: 40%; /* not 50%, to leave room for text and gif */
+  margin: -220px 0 0 -260px;
 }
 
 .love .block {
@@ -63,10 +64,10 @@ body {
   position: absolute;
 }
 
-/* ----------------- TEXT ----------------- */
+/*---------------------- TEXT -------------------------*/
 #love-text {
   position: absolute;
-  top: 70%;
+  top: 65%; /* position it under the heart */
   left: 50%;
   transform: translateX(-50%);
   font-size: 2rem;
@@ -75,21 +76,19 @@ body {
   white-space: nowrap;
   letter-spacing: .1em;
   animation: typing 4s steps(30, end) forwards, blink-caret .75s step-end infinite;
-   }
+  display: none;
+}
 
-/* ----------------- GARY GIF ----------------- */
-#sleeping-gif {
+/*---------------------- GARY GIF -------------------------*/
+#sleeping-gif img {
   position: absolute;
-  top: 80%;
+  top: 72%; /* a little under the text */
   left: 50%;
   transform: translateX(-50%);
+  width: 300px;
 }
 
-#sleeping-gif img {
-  width: 300px; /* Change here to any size you want (it will work now!!) */
-}
-
-/* ----------------- Typing Animation ----------------- */
+/*---------------------- Typing Animation -------------------------*/
 @keyframes typing {
   from { width: 0; }
   to { width: 28ch; }
