@@ -86,8 +86,7 @@ body {
   top: 68%; /* little under the text */
   left: 50%;
   transform: translateX(-50%);
-  margin-top: 20px;
-  width: 350px;
+  width: 400px;
 }
 
 /*---------------------- Typing Animation -------------------------*/
