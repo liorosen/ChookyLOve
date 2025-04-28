@@ -47,8 +47,8 @@ body {
   height: 300px;  
   position: absolute;
   left: 50%;
-  top: 25%;  
-  margin: -170px 0 0 -200px;
+  top: 30%;  
+  transform: translate(-50%, -50%); 
 }
 
 .love .block {
@@ -67,7 +67,7 @@ body {
 /*---------------------- TEXT -------------------------*/
 #love-text {
   position: absolute;
-  top: 48%; /* position it under the heart */
+  top: 55%; /* position it under the heart */
   left: 50%;
   transform: translateX(-50%);
   font-size: 2rem;
@@ -82,7 +82,7 @@ body {
 /*---------------------- GARY GIF -------------------------*/
 #sleeping-gif img {
   position: absolute;
-  top: 58%; /* little under the text */
+  top: 65%; /* little under the text */
   left: 50%;
   transform: translateX(-50%);
   width: 400px;
