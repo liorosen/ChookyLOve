@@ -14,6 +14,7 @@
 
     <div class="container">
 
+        <!-- Heart at the top -->
         <div id="heart" class="love">
             <div class="block">
                 <div class="div1"></div>
@@ -23,12 +24,15 @@
             </div>
         </div>
 
+        <!-- I Love You Chooky between heart and Gary gif -->
         <div id="love-text">I Love You Chooky</div>
 
+        <!-- Gary gif under text -->
         <div id="sleeping-gif">
             <img id="sleeping" src="images/Garygif.gif" />
         </div>
 
+        <!-- Optional: Play/Pause buttons for music -->
         <div id="audio-controls">
             <button id="playBtn">Play Music</button>
             <button id="pauseBtn">Pause Music</button>
@@ -41,13 +45,11 @@
     <script>
         const audio = document.getElementById('audios');
 
-        // To force browsers to allow audio, user must click once
         window.addEventListener('click', function playMusicOnce() {
             audio.play();
-            window.removeEventListener('click', playMusicOnce); // Remove after first click
+            window.removeEventListener('click', playMusicOnce);
         });
 
-        // Music control buttons
         document.getElementById('playBtn').addEventListener('click', () => {
             audio.play();
         });
@@ -71,10 +73,7 @@
             }, 5000);
         };
 
-        let finishedHeart = false;
         function Rise() {
-            console.log("Start rising");
-
             let timer2 = null, distance = 0;
             const target = 120, speed = 1;
             let love_top = parseFloat(window.getComputedStyle(love, null).top.slice(0, -2));
@@ -83,12 +82,10 @@
                 distance += speed;
                 if (distance >= target) {
                     clearInterval(timer2);
-                    console.log("Rise finished");
 
-                    // Show text after heart finishes rising
+                    // After rising finished, show text
                     document.getElementById('love-text').style.display = 'block';
                 }
-
                 love.style.top = (love_top - distance) + "px";
             }, 22);
         }

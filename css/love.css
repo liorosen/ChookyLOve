@@ -31,13 +31,10 @@
     border-right: .15em solid black;
     margin: 20px auto;
     letter-spacing: .15em;
-    animation:
-      typing 2s steps(20, end),
-      blink-caret .75s step-end infinite;
+    animation: typing 2s steps(20, end) forwards, blink-caret .75s step-end infinite;
     width: 0;
     display: none;
-  }
-  
+}
   #audio-controls {
     margin-top: 20px;
   }
