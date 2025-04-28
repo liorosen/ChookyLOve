@@ -8,45 +8,39 @@
 
 <body>
 
-    <audio id="audios" preload="auto" loop>
-        <source src="MP3/Kiss - I Was Made For Lovin' You.mp3" type="audio/mpeg">
-    </audio>
+<audio id="audios" preload="auto" autoplay loop>
+  <source src="MP3/Kiss - I Was Made For Lovin' You.mp3" type="audio/mpeg">
+</audio>
 
-    <div class="container">
-
-        <!-- Heart -->
-        <div id="heart" class="love">
-            <div class="block">
-                <div class="div1"></div>
-                <div class="div2"></div>
-                <div class="div3"></div>
-                <div class="div4"></div>
-            </div>
+<div class="container">
+    <div id="heart" class="love">
+        <div class="block">
+            <div class="div1"></div>
+            <div class="div2"></div>
+            <div class="div3"></div>
+            <div class="div4"></div>
         </div>
-
-        <!-- I Love You Chooky text -->
-        <div id="love-text"> I Love You Chooky !!</div>
-
-        <!-- Gary sleeping gif -->
-        <div id="sleeping-gif">
-            <img id="sleeping" src="images/Garygif.gif" />
-        </div>
-
-        <!-- Audio buttons -->
-        <div id="audio-controls">
-            <button id="playBtn">Play Music</button>
-            <button id="pauseBtn">Pause Music</button>
-        </div>
-
     </div>
 
-    <script src="js/love.js"></script>
+    <div id="love-text">I Love You Chooky !!</div>
+
+    <div id="sleeping-gif">
+        <img id="sleeping" src="images/Garygif.gif" />
+    </div>
+
+    <div id="audio-controls">
+        <button id="playBtn">Play Music</button>
+        <button id="pauseBtn">Pause Music</button>
+    </div>
+</div>
+
+<script src="js/love.js"></script>
 
 <script>
-    
-    document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     const audio = document.getElementById('audios');
 
+    // Buttons to control music
     document.getElementById('playBtn').addEventListener('click', () => {
         audio.play();
     });
@@ -55,21 +49,17 @@
         audio.pause();
     });
 
-    // Page loading
+    // Start heart and text timing
     document.getElementById('heart').style.display = 'none';
     document.getElementById('love-text').style.display = 'none';
 
     setTimeout(() => {
-    const audio = document.getElementById('audios');
-    audio.play(); // Play the music automatically when Gary appears!
+        document.getElementById('heart').style.display = 'block';
 
-    document.getElementById('heart').style.display = 'block';
-
-    timer = setInterval(() => {
-        Next();
-    }, 200);
-}, 3000); // 3 seconds after page loads
-
+        timer = setInterval(() => {
+            Next();
+        }, 200);
+    }, 3000); // Heart appears after 3 seconds
 });
 
 // Rise function
@@ -90,3 +80,6 @@ function Rise() {
     }, 16);
 }
 </script>
+
+</body>
+</html>
