@@ -48,18 +48,6 @@
     margin-top: 300px;
 }
   
-  .love .block {
-    position: absolute;
-    visibility: hidden;
-  }
-  
-  .love .block div {
-    width: 20px;
-    height: 20px;
-    background: url("../images/mooncake.png") no-repeat center;
-    background-size: cover;
-    position: absolute;
-  }
   
   /* Text */
   #love-text {
