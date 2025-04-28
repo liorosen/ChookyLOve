@@ -68,7 +68,7 @@ body {
 #love-text {
   position: absolute;
   top: 55%; /* position it under the heart */
-  left: 50%;
+  left: 20%;
   transform: translateX(-50%);
   font-size: 2rem;
   color: black;
