@@ -48,6 +48,7 @@ body {
   position: absolute;
   left: 10%;  
   top: 30%;   
+  margin: 0; 
   transform: translateY(-50%);  
 }
 
