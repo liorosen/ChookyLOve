@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  border: 0;
   box-sizing: border-box;
 }
 
@@ -9,7 +10,10 @@ html, body {
   height: 100%;
   overflow: hidden;
   font-family: "Comic Sans MS", cursive, sans-serif;
-  text-align: center;
+}
+
+body {
+  position: relative;
 }
 
 #start-screen {
@@ -34,19 +38,16 @@ html, body {
   height: 100%;
   position: relative;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 20px; /* spacing between heart, text, gif */
-  padding-top: 100px; 
 }
 
-/* Heart */
+/*---------------------- HEART -------------------------*/
 .love {
-  width: 520px;
-  height: 440px;
+  width: 520px; /* 13 * 40 */
+  height: 440px; /* 11 * 40 */
   position: absolute;
+  left: 50%;
+  top: 40%; /* not 50%, to leave room for text and gif */
+  margin: -220px 0 0 -260px;
 }
 
 .love .block {
@@ -57,38 +58,42 @@ html, body {
 .love .block div {
   width: 40px;
   height: 40px;
-  position: absolute;
   background: url("../images/mooncake.png") no-repeat center;
   background-size: contain;
+  position: absolute;
 }
 
-/* Text */
+/*---------------------- TEXT -------------------------*/
 #love-text {
+  position: absolute;
+  top: 65%; /* position it under the heart */
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 2rem;
   color: black;
   overflow: hidden;
   white-space: nowrap;
-  margin-top: 500px; /* Moved DOWN so it's below heart */
   letter-spacing: .1em;
   animation: typing 4s steps(30, end) forwards, blink-caret .75s step-end infinite;
   display: none;
-  width: 0;
 }
 
-/* Gary sleeping gif */
+/*---------------------- GARY GIF -------------------------*/
 #sleeping-gif img {
-  width: 300px;
   position: absolute;
-  bottom: 20%;
+  top: 72%; /* a little under the text */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
 }
 
-/* Typing animation */
+/*---------------------- Typing Animation -------------------------*/
 @keyframes typing {
   from { width: 0; }
   to { width: 28ch; }
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent }
+  from, to { border-color: transparent; }
   50% { border-color: black; }
 }
