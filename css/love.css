@@ -69,11 +69,9 @@
     white-space: nowrap;
     margin: 10px auto;
     letter-spacing: .1em;
-    animation: showText 2s ease forwards;
-    animation-delay: 14s; /* Adjust this delay to match your heart finish time */
-     
+    animation: typing 4s steps(30, end) forwards, blink-caret .75s step-end infinite;
     width: 0;
-    display: none;
+     
   }
   
   #sleeping-gif img {
@@ -94,8 +92,3 @@
     50% { border-color: black; }
   }
   
-  @keyframes showText {
-    to {
-      opacity: 1;
-    }
-  }
