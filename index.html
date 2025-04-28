@@ -68,6 +68,9 @@ function Rise() {
 
     let timer2 = null, distance = 0;
     const target = 120, speed = 1;
+    const love = document.getElementById('heart'); // <-- you forgot this!
+    const loveText = document.getElementById('love-text'); // <---
+
     let love_top = parseFloat(window.getComputedStyle(love, null).top.slice(0, -2));
 
     timer2 = setInterval(() => {
@@ -76,13 +79,16 @@ function Rise() {
             clearInterval(timer2);
             console.log("Rise finished");
 
-            // After heart rise completed, show text
-            document.getElementById('love-text').style.display = 'block';
+            loveText.style.display = 'block'; // show text
+            loveText.style.animation = 'none'; // reset typing animation
+            void loveText.offsetWidth; // trick: force browser reflow
+            loveText.style.animation = 'typing 4s steps(30, end) forwards, blink-caret .75s step-end infinite'; // restart typing
         }
 
         love.style.top = (love_top - distance) + "px";
     }, 22);
 }
+
 </script>
 
 </body>
