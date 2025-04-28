@@ -99,21 +99,22 @@ function Rise() {
 
     let love_top = parseFloat(window.getComputedStyle(love, null).top.slice(0, -2));
     
-
     timer2 = setInterval(() => {
         distance += speed;
-        // console.log(distance);
         if (distance >= target) {
             clearInterval(timer2);
-
             console.log("升空完毕");
 
+            // Show the text after rising
+            const loveText = document.getElementById('love-text');
+            loveText.style.display = 'block';
+            loveText.style.animation = 'none';
+            void loveText.offsetWidth;
+            loveText.style.animation = 'typing 4s steps(30, end) forwards, blink-caret .75s step-end infinite';
         }
 
         love.style.top = (love_top - distance) + "px";
-
     }, 22);
-
 }
 
 window.onload = function () {
