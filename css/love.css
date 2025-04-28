@@ -42,7 +42,7 @@ html, body {
   height: 440px;
   position: absolute;
   left: 50%;
-  top: 20%; /* 🛑 Change top: 50% to 20% to pull heart down */
+  top: 10%; /* 🛑 Change top: 50% to 20% to pull heart down */
   transform: translateX(-50%); /
 }
 
