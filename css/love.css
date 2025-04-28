@@ -44,10 +44,12 @@
   /* The heart */
 
   .love {
-    width: 300px;
-    height: 260px;
-    margin: auto;
-    position: relative;
+    width: 520px;
+    height: 440px;
+    left: 50%;
+    top: 50%;
+    margin: -220px 0 0 -260px;
+    position: absolute;
     
   }
   
@@ -58,8 +60,8 @@
   }
   
   .love .block div {
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
     background: url("../images/mooncake.png") no-repeat;
     background-size: contain;
   }
