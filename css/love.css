@@ -43,11 +43,11 @@ body {
 
 /*---------------------- HEART -------------------------*/
 .love {
-  width: 400px; 
-  height: 340px;  
+  width: 300px; 
+  height: 300px;  
   position: absolute;
   left: 50%;
-  top: 30%;  
+  top: 25%;  
   margin: -170px 0 0 -200px;
 }
 
@@ -67,6 +67,7 @@ body {
 /*---------------------- TEXT -------------------------*/
 #love-text {
   position: absolute;
+  margin-top: 320px;
   top: 60%; /* position it under the heart */
   left: 50%;
   transform: translateX(-50%);
@@ -85,7 +86,8 @@ body {
   top: 68%; /* little under the text */
   left: 50%;
   transform: translateX(-50%);
-  width: 400px;
+  margin-top: 20px;
+  width: 350px;
 }
 
 /*---------------------- Typing Animation -------------------------*/
