@@ -37,16 +37,18 @@
     align-items: center;
     display: none; /* hide initially */
     gap: 10px;
-}
+  }
   
 
   /* The heart */
   .love {
-    width: 300px;
-    height: 300px;
+    width: 220px;
+    height: 220px;
     position: relative;
-    margin-top: 300px;
-}
+    display: grid;
+    place-items: center;
+    margin-top: 20px;
+  }
   
   .love .block {
     position: absolute;
